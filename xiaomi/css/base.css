@@ -1,0 +1,23 @@
+/*
+* @Author: 白杨
+* @Date:   2017-08-17 16:07:25
+* @Last Modified by:   白杨
+* @Last Modified time: 2017-08-18 09:13:57
+*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "微软雅黑","宋体","sans-serif";
+}
+a{
+	text-decoration: none;
+}
+body{
+	background: #fff;
+}
+/* img{
+	display: block;
+	width: 100%;
+	height: 100%;
+} */
