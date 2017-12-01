@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="get">
+    账号：<input type="text" name="user">
+    密码：<input type="text" name="pass">
+    <input type="submit">
+</form>
+</body>
+</html>
+<script>
+    let an=document.querySelector('input[type="submit"]');
+
+    an.onclick=function (e) {
+        e.preventDefault();
+        let str='';
+        let input=document.querySelectorAll('input[type=text]')
+        input.forEach(val=>{
+            str+=`${val.name}&`;
+        })
+        str.slice(0,-1);
+        let ajax=new XMLHttpRequest();
+        ajax.open('get','index.php?'+str,true);
+        ajax.send();
+        ajax.onreadystatechange=function () {
+            if(ajax.readyState==4){
+                if(ajax.status==200){
+                    console.log(ajax.responseText)
+                }
+            }
+        }
+    }
+
+</script>
