@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="../../../Users/白杨/Desktop/插件/jquery-1.11.3/jquery.js"></script>
 </head>
 <body>
 <form action="" method="get">
@@ -20,9 +21,10 @@
         let str='';
         let input=document.querySelectorAll('input[type=text]')
         input.forEach(val=>{
-            str+=`${val.name}&`;
+            str+=val.name+'='+val.value+'&';
         })
-        str.slice(0,-1);
+        str=str.slice(0,-1);
+        console.log(str)
         let ajax=new XMLHttpRequest();
         ajax.open('get','index.php?'+str,true);
         ajax.send();
