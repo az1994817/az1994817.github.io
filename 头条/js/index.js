@@ -5,7 +5,7 @@ $(function () {
     });
 
     $.ajax({
-        url: "http://api.jisuapi.com/news/channel?appkey=59ce2b61a17bbb8f",
+        url: "https://api.jisuapi.com/news/channel?appkey=59ce2b61a17bbb8f",
         dataType: "jsonp",
         success: function (val) {
             var arr = val.result;
@@ -26,7 +26,7 @@ $(function () {
                 let num = obj.num || "10";
                 let act = obj.act || $("li.active");
                 $.ajax({
-                    url: "http://api.jisuapi.com/news/get?channel=" + act.text() + "&start=" + start + "&num=" + num + "&appkey=59ce2b61a17bbb8f",
+                    url: "https://api.jisuapi.com/news/get?channel=" + act.text() + "&start=" + start + "&num=" + num + "&appkey=59ce2b61a17bbb8f",
                     dataType: "jsonp",
                     success: function (val) {
                         let arr = val.result.list;
@@ -95,7 +95,7 @@ $(function () {
             function LookFor(obj) {
                 let val = obj.val;
                 $.ajax({
-                    url: "http://api.jisuapi.com/news/search?keyword=" + val + "&appkey=59ce2b61a17bbb8f",
+                    url: "https://api.jisuapi.com/news/search?keyword=" + val + "&appkey=59ce2b61a17bbb8f",
                     dataType: "jsonp",
                     success: function (val) {
                         let arr = val.result.list;
