@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+}
+header{
+    width: 100%;
+    height: 0.5rem;
+    background: red;
+    display: flex;
+}
+header input{
+    width: 75%;
+    height: 0.3rem;
+    margin:0.1rem auto;
+    border:none;
+    border-radius: 0.05rem;
+    padding-left: 1em;
+    line-height:0.3rem;
+}
+#wrapper{
+    width: 100%;
+    height: 0.4rem;
+    border-bottom:1px solid #cccccc;
+    overflow: hidden;
+}
+#scroller{
+    width:9.8rem;
+    height: 100%;
+    user-select: none;
+    touch-action: none;
+}
+#scroller > ul > li{
+    width: 0.7rem;
+    height: 100%;
+    line-height: 0.4rem;
+    text-align: center;
+    float: left;
+}
+#scroller > ul > li.active{
+    color: #E21918;
+}
+
+ul.content{
+    width: 100%;
+    height:auto;
+    border-bottom:1px solid #cccccc;
+    overflow: hidden;
+}
+ul.content > a{
+    display: block;
+    width:100%;
+    height:auto;
+    color: #000;
+    text-decoration: none;
+}
+li.list{
+    display: flex;
+    width: 100%;
+    height:auto;
+    margin:0 auto;
+    padding:0.05rem;
+    border-bottom:1px solid #cccccc;
+    padding-top: 0.05rem;
+    padding-bottom: 0.05rem;
+}
+.left{
+    width: 40%;
+    height:0.77rem;
+    padding:0.06rem;
+}
+.left img{
+    display: block;
+    width: 90%;
+    height: 100%;
+}
+.right{
+    width: 53%;
+    height: 100%;
+    position: relative;
+}
+.right > p{
+    width: 100%;
+    /*margin-bottom:0.05rem;*/
+}
+.time{
+    /*position: absolute;*/
+    /*bottom:0.02rem;*/
+    font-size: 10px;
+    color: #aaaaaa;
+    margin-top:0.05rem;
+}
+div.noimg{
+    width: 100%;
+    height:auto;
+}
+.go{
+    width:100%;
+    height: 0.05rem;
+    text-align: center;
+    margin-top:0.05rem;
+}
