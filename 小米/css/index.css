@@ -52,7 +52,7 @@
 }
 .gouwuche-xia{
 	width: 283px;
-	height: 0;
+	height: 100px;
 	background: #ffffff;
 	line-height: 100px;
 	text-align: center;
@@ -62,9 +62,9 @@
 	font-size: 12px;
 	color: #333333;
 	box-shadow: 0px 1px 3px 1px rgb(170,170,170);
-	transition: all 0.5s;
-	overflow: hidden;
-	/*display: none;*/
+	/*transition: all 0.5s;*/
+	/*overflow: hidden;*/
+	display: none;
 }
 .toubu-denglu li{
 	float: right;
@@ -115,7 +115,7 @@
 }
 .daohang-tab{
 	width: 1349px;
-	height: 0px;
+	height: 229px;
 	position: absolute;
 	z-index: 999;
 	top: 140px;
@@ -271,7 +271,8 @@
 	left: 0;
 }
 .banner-tu li a img{
-	opacity: 0;
+	/*opacity: 0;*/
+	display: none;
 	width: 100%;
 	height: 100%;
 	position:absolute;
@@ -372,13 +373,15 @@
 	position: absolute;
 	top: 0;
 	left: 234px;
-	visibility: hidden;
+	/*visibility: hidden;*/
 	/* opacity: 0; */
-	/* display: none; */
+	/*display: none;*/
 	z-index: 999;
 	display: flex;
+
 	flex-direction: column;
 	flex-wrap: wrap;
+
 }
 .xuanxiangka-box{
 	display: block;

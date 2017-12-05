@@ -1,7 +1,7 @@
 
 //购物车
-let gouwuche=document.getElementsByClassName('you-gouwuche')[0];
-let gouwuXia=document.getElementsByClassName('gouwuche-xia')[0];
+var gouwuche=document.getElementsByClassName('you-gouwuche')[0];
+var gouwuXia=document.getElementsByClassName('gouwuche-xia')[0];
 
 gouwuche.onmouseover=function(){
 	// gouwuXia.style.opacity='1';
@@ -19,15 +19,15 @@ gouwuche.onmouseout=function(){
 
 
 //banner选项卡
-let ce1=document.getElementsByClassName('cedaohang1')[0];
-let celi=ce1.getElementsByTagName('li')
-let TaBa=document.getElementsByClassName('TABA');
-let xuanxiangkaBox=[];
+var ce1=document.getElementsByClassName('cedaohang1')[0];
+var celi=ce1.getElementsByTagName('li')
+var TaBa=document.getElementsByClassName('TABA');
+var xuanxiangkaBox=[];
 for(let i=0;i<TaBa.length;i++){
 	xuanxiangkaBox[xuanxiangkaBox.length]=TaBa[i].getElementsByClassName('xuanxiangka-box');
 }
 // let xuanneirong=document.getElementsByClassName('a');
-let kuan;
+var kuan;
 	// for(let i=0;i<celi.length;i++){
 	// 	celi[i].onmouseover=function(){
 	// 		TaBa[i].style.visibility='visible';
@@ -53,9 +53,9 @@ let kuan;
 	
 
 //导航选项卡
-let daohangZi=document.getElementsByClassName('daohang-zi')[0];
-let daohangZili=document.getElementsByClassName('zili');
-let daohangTab=document.getElementsByClassName('daohang-tab');
+var daohangZi=document.getElementsByClassName('daohang-zi')[0];
+var daohangZili=document.getElementsByClassName('zili');
+var daohangTab=document.getElementsByClassName('daohang-tab');
 
 	for(let i=0;i<daohangTab.length;i++){
 		daohangZili[i].onmouseover=function(){
@@ -75,18 +75,18 @@ let daohangTab=document.getElementsByClassName('daohang-tab');
 		}
 	}
 //banner图
-let bannerBigBox = document.getElementsByClassName('banner-big-box')[0];
-let bannerTu = document.getElementsByClassName('banner-tu')[0];
-let lis = bannerTu.getElementsByTagName('li')[0];
-let lisa = lis.getElementsByTagName('a')[0];
-let lisaimg=lisa.getElementsByTagName('img');
-let bannerDiandian = document.getElementsByClassName('banner-diandian')[0];
-let diandiana = bannerDiandian.getElementsByTagName('li');
+var bannerBigBox = document.getElementsByClassName('banner-big-box')[0];
+var bannerTu = document.getElementsByClassName('banner-tu')[0];
+var lis = bannerTu.getElementsByTagName('li')[0];
+var lisa = lis.getElementsByTagName('a')[0];
+var lisaimg=lisa.getElementsByTagName('img');
+var bannerDiandian = document.getElementsByClassName('banner-diandian')[0];
+var diandiana = bannerDiandian.getElementsByTagName('li');
 
 
 // 轮播图时间函数
-let num=0;
-let t=setInterval(fn,5000);
+var num=0;
+var t=setInterval(fn,5000);
 function fn(){
 	num++;
 	if(num==lisaimg.length){
@@ -117,8 +117,8 @@ for(let i=0;i<lisaimg.length;i++){
 	}
 }
 //轮播左右箭头
-let zuojiantou=document.getElementsByClassName('banner-zuo-jiantou')[0];
-let youjiantou=document.getElementsByClassName('banner-you-jiantou')[0];
+var zuojiantou=document.getElementsByClassName('banner-zuo-jiantou')[0];
+var youjiantou=document.getElementsByClassName('banner-you-jiantou')[0];
 zuojiantou.onclick=function(){
 	num--;
 	if(num==-1){
@@ -146,12 +146,12 @@ youjiantou.onclick=function(){
 
 function jiadiandianji(num){
 	//家电开始
-	let jiadianZiBox=document.getElementsByClassName('jiadian-biaoti-big-box')[num];
-	let jiadianZi=jiadianZiBox.getElementsByTagName('a');
+	var jiadianZiBox=document.getElementsByClassName('jiadian-biaoti-big-box')[num];
+	var jiadianZi=jiadianZiBox.getElementsByTagName('a');
 	//家电图片
-	let jiadianBox=document.getElementsByClassName('jiadian-tupian-big-box')[num];
-	let jiadianTuBox=jiadianBox.getElementsByClassName('jiadian-tu-box')[0];
-	let jiadianYouBox=jiadianTuBox.getElementsByClassName('jiadian-you-box');
+	var jiadianBox=document.getElementsByClassName('jiadian-tupian-big-box')[num];
+	var jiadianTuBox=jiadianBox.getElementsByClassName('jiadian-tu-box')[0];
+	var jiadianYouBox=jiadianTuBox.getElementsByClassName('jiadian-you-box');
 	for(let i=0;i<jiadianZi.length;i++){
 		jiadianZi[i].onmouseover=function(){
 			for(let j=0;j<jiadianZi.length;j++){
@@ -174,23 +174,23 @@ function neirong(num){
 	//内容
 	//内容轮播
 	//最外边大盒子
-	let pro2=document.getElementsByClassName('pro2')[0];
-	let pro2li=pro2.getElementsByTagName('li')[num];
+	var pro2=document.getElementsByClassName('pro2')[0];
+	var pro2li=pro2.getElementsByTagName('li')[num];
 	//获取li的宽
-	let widths=pro2li.offsetWidth;
+	var widths=pro2li.offsetWidth;
 	//
-	let halibox=pro2li.getElementsByClassName('halineirongbox')
+	var halibox=pro2li.getElementsByClassName('halineirongbox')
 	//左箭头
-	let zuojiantou1=pro2li.getElementsByClassName('zuojiantou')[0];
+	var zuojiantou1=pro2li.getElementsByClassName('zuojiantou')[0];
 	//右箭头
-	let youjiantou1=pro2li.getElementsByClassName('youjiantou')[0];
+	var youjiantou1=pro2li.getElementsByClassName('youjiantou')[0];
 	//圆点
-	let diandianBox=pro2.getElementsByClassName('diandian-box')[0];
-	let diandian=diandianBox.getElementsByTagName('div')
-	let now=next=0;
-	let zuokaiguan=false;
-	let youkaiguan=true;
-	let flag=true;
+	var diandianBox=pro2.getElementsByClassName('diandian-box')[0];
+	var diandian=diandianBox.getElementsByTagName('div')
+	var now=next=0;
+	var zuokaiguan=false;
+	var youkaiguan=true;
+	var flag=true;
 	function neirongfn(){
 		if(zuokaiguan){
 			flag=false;
@@ -259,17 +259,17 @@ neirong(0);
 
 //明星单品
 //箭头
-let danpinZuojiantou=document.getElementsByClassName('danping-zuo-jiantou')[0];
-let danpinYoujiantou=document.getElementsByClassName('danping-you-jiantou')[0];
+var danpinZuojiantou=document.getElementsByClassName('danping-zuo-jiantou')[0];
+var danpinYoujiantou=document.getElementsByClassName('danping-you-jiantou')[0];
 //单品图big-big-box
-let bigbigbox=document.getElementsByClassName('danpintu-big-big-box')[0];
-let bigbox=bigbigbox.getElementsByClassName('danpintu-big-box')[0];
+var bigbigbox=document.getElementsByClassName('danpintu-big-big-box')[0];
+var bigbox=bigbigbox.getElementsByClassName('danpintu-big-box')[0];
 //大宽
-let bigwidths=bigbox.offsetWidth;
+var bigwidths=bigbox.offsetWidth;
 //小宽
-let widths=bigbigbox.offsetWidth;
-let num1=0;
-let danpingkaiguan=bigwidths/widths;
+var widths=bigbigbox.offsetWidth;
+var num1=0;
+var danpingkaiguan=bigwidths/widths;
 danpinYoujiantou.onclick=function(){
 	num1++;
 	// if(num1==danpingkaiguan){
