@@ -31,10 +31,10 @@ for (let i = 0; i < $('.daohang-tab').length; i++) {
         for (let j = 0; j < $('.daohang-tab').length; j++) {
             $('.daohang-tab').eq(j).hide();
         }
-        $('.daohang-tab').eq(i).show();
+        $('.daohang-tab').eq(i).slideDown();
     })
     $('.zili').eq(i).mouseout(function () {
-        $('.daohang-tab').eq(i).hide();
+        $('.daohang-tab').eq(i).slideUp();
     })
 }
 

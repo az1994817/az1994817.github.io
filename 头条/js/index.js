@@ -2,12 +2,17 @@ $(function () {
     let myScroll = new IScroll('#wrapper', {
         scrollX: true,
         scrollY: false,
+        click:true
     });
 
     $.ajax({
         url: "https://api.jisuapi.com/news/channel?appkey=59ce2b61a17bbb8f",
         dataType: "jsonp",
+        beforeSend:function(){
+            $('.zhao').show();
+        },
         success: function (val) {
+            $('.zhao').hide();
             var arr = val.result;
             console.log(arr)
             var str = "";
@@ -28,7 +33,11 @@ $(function () {
                 $.ajax({
                     url: "https://api.jisuapi.com/news/get?channel=" + act.text() + "&start=" + start + "&num=" + num + "&appkey=59ce2b61a17bbb8f",
                     dataType: "jsonp",
+                    beforeSend:function(){
+                        $('.zhao').show();
+                    },
                     success: function (val) {
+                        $('.zhao').hide();
                         let arr = val.result.list;
                         let str = "";
                         arr.forEach((val) => {
@@ -143,12 +152,12 @@ $(function () {
                 })
             }
 
-            $("header .for").on("click", function () {
-                // console.log($("input.lookfor").val())
-                LookFor({
-                    val: $("input.lookfor").val()
-                })
-            })
+            // $("header .for").on("click", function () {
+            //     // console.log($("input.lookfor").val())
+            //     LookFor({
+            //         val: $("input.lookfor").val()
+            //     })
+            // })
             $("input.lookfor").keyup(function (e) {
                 if (e.which == 13) {
                     LookFor({
@@ -158,5 +167,10 @@ $(function () {
             })
         }
     })
+    $('input').click(function () {
+        location.href='newindex.html';
+    })
+
+
 
 })

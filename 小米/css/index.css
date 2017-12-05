@@ -122,7 +122,7 @@
 	left: 0;
 	/* opacity: 0; */
 	display: none;
-	transition: all 0.5s;
+	/*transition: all 0.5s;*/
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
 	padding-left: 60px;

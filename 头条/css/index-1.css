@@ -28,13 +28,23 @@ header{
     display: flex;
 }
 header input{
-    width: 75%;
+    width: 55%;
     height: 0.3rem;
     margin:0.1rem auto;
     border:none;
     border-radius: 0.05rem;
     padding-left: 1em;
     line-height:0.3rem;
+    float: left;
+}
+.fanhui{
+    width:10%;
+    height:100%;
+    float: left;
+    line-height: 42px;
+    text-align: center;
+    font-size: 25px;
+    color: #dddddd;
 }
 #wrapper{
     width: 100%;
