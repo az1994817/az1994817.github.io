@@ -94,9 +94,7 @@ $(function () {
             $('input').val('');
         }
     })
-    $('.fanhui').click(function () {
-        history.back();
-    })
+    
 
 
 
