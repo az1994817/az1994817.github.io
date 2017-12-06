@@ -1,7 +1,6 @@
 $(function () {
     let search='';
     let arr=[];
-    // localStorage.history=' ';
     $('.fanhui').click(function () {
       history.back();
     })
@@ -49,7 +48,6 @@ $(function () {
             success:function (val) {
                 let arr=val.result.list;
                 let arr1=''
-                console.log(arr)
                 arr.forEach(function (val) {
                     if(val.pic){
                         arr1+=`<div class="xinwen" style="border-bottom: 1px solid #DDD;box-sizing: border-box;padding-top: 0.2rem;padding-bottom: 0.2rem; ">
