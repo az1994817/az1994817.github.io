@@ -46,6 +46,22 @@ header input{
     font-size: 25px;
     color: #dddddd;
 }
+.history{
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.history span{
+    width:33%;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0.1rem;
+    color: #000;
+}
 #wrapper{
     width: 100%;
     height: 0.4rem;
