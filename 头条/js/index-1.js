@@ -44,7 +44,7 @@ $(function () {
 
     function fn(val) {
         $.ajax({
-            url:`http://api.jisuapi.com/news/search?keyword=${val}&appkey=59ce2b61a17bbb8f`,
+            url:`https://api.jisuapi.com/news/search?keyword=${val}&appkey=59ce2b61a17bbb8f`,
             dataType:'jsonp',
             success:function (val) {
                 let arr=val.result.list;
@@ -94,9 +94,7 @@ $(function () {
             $('input').val('');
         }
     })
-    $('.fanhui').click(function () {
-        history.back();
-    })
+
 
 
 
