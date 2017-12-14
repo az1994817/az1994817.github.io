@@ -1,19 +1,19 @@
 //购物车
 $('.you-gouwuche').mouseover(function () {
-    $('.gouwuche-xia').slideDown(1000);
+    $('.gouwuche-xia').slideDown(500);
 })
 $('.you-gouwuche').mouseout(function () {
-    $('.gouwuche-xia').slideUp(1000);
+    $('.gouwuche-xia').slideUp(500);
 })
 //banner选项卡
 let kuan;
 $('.cedaohang1>li').each(function (index, val) {
     $(val).find('.TABA').hide();
     $(this).mouseover(function () {
-        $(val).find('.TABA').show();
+        $(val).find('.TABA').slideDown();
     })
     $(this).mouseout(function (index) {
-        $(val).find('.TABA').hide();
+        $(val).find('.TABA').slideUp();
     })
 })
 let TaBa = document.getElementsByClassName('TABA');
@@ -40,7 +40,7 @@ for (let i = 0; i < $('.daohang-tab').length; i++) {
 
 //轮播图
 let num = 0;
-let t = setInterval(fn, 1000);
+let t = setInterval(fn, 3000);
 
 function fn() {
     num++;
@@ -69,7 +69,7 @@ for (let i = 0; i < $('.banner-tu li a img').length; i++) {
     })
 
     $('.banner-diandian li').eq(i).mouseout(function () {
-        t = setInterval(fn, 1000);
+        t = setInterval(fn, 3000);
     })
 }
 //轮播左右箭头
@@ -81,7 +81,7 @@ $('.banner-zuo-jiantou').mouseover(function () {
 })
 $('.banner-zuo-jiantou').mouseout(function () {
     clearInterval(t);
-    t = setInterval(fn, 1000);
+    t = setInterval(fn, 3000);
 })
 
 $('.banner-you-jiantou').mouseover(function () {
@@ -89,7 +89,7 @@ $('.banner-you-jiantou').mouseover(function () {
 })
 $('.banner-you-jiantou').mouseout(function () {
     clearInterval(t);
-    t = setInterval(fn, 1000);
+    t = setInterval(fn, 3000);
 })
 
 
